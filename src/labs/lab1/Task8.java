@@ -6,6 +6,10 @@ public class Task8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println(sc.nextInt()+sc.nextInt());
+        String day = sc.next();
+        String month = sc.next();
+        int numberMonth = sc.nextInt();
+
+        System.out.println(day + " " + numberMonth + " " + month);
     }
 }

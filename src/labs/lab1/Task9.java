@@ -6,12 +6,43 @@ public class Task9 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int number = sc.nextInt();
-        int number4 = number-1+number+number+1;
+        String month = sc.next();
+        int days = sc.nextInt();
 
-        System.out.println(number-1);
-        System.out.println(number);
-        System.out.println(number+1);
-        System.out.println(Math.pow(number4,2));
+        getAnswer(month,days);
+
+
+    }
+
+
+    static void getAnswer(String month, int days) {
+        if(month.equals("February") && days <= 29 ) {
+
+            System.out.println("Yes \n if((year % 400 == 0) ||" +
+                    "(year %4 == 0 && year % 100 != 0)) = 29 days \n else 28 days");
+
+        } else if(month.equals("January") ||
+                month.equals("March") ||
+                month.equals("May") ||
+                month.equals("July") ||
+                month.equals("August") ||
+                month.equals("October") ||
+                month.equals("December") &&
+                days <=31) {
+
+            System.out.println("Yes");
+
+        } else if(month.equals("April") ||
+                month.equals("June") ||
+                month.equals("September") ||
+                month.equals("November") &&
+                days <=30) {
+
+            System.out.println("Yes");
+
+        } else {
+            System.out.println("No or wrong month");
+        }
+
     }
 }

@@ -1,18 +1,14 @@
 package labs.lab1;
 
-
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
-public class Task10 {
+public class Task12 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         Calendar calendar = new GregorianCalendar();
+        Scanner sc = new Scanner(System.in);
 
-        int year = sc.nextInt();
-
-        System.out.println(Math.abs(calendar.get(Calendar.YEAR) - year));
-
+        System.out.println(calendar.get(Calendar.YEAR) - sc.nextInt());
     }
 }
