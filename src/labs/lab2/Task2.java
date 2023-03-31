@@ -2,7 +2,7 @@ package labs.lab2;
 
 public class Task2 {
     public static void main(String[] args) {
-        int[][] array = new int[10][10];
+        int[][] array = new int[5   ][10];
         sneak(array);
     }
 
@@ -16,7 +16,9 @@ public class Task2 {
                         System.out.print("=");
                     }
                 }
+
                 System.out.println("");
+
             } else if (i % 2 != 0 && i != array.length - 1) {
                 for (int j = 0; j < array[i].length; j++) {
                     if (j == 0) {
@@ -45,6 +47,7 @@ public class Task2 {
                         System.out.print("=");
                     }
                 }
+
                 System.out.println("");
             }
         }
