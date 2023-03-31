@@ -13,7 +13,7 @@ public class Account implements IAccount{
         return "" + acc;
     }
 
-    public void setDeposite(double money) {
+    public void setDeposit(double money) {
         this.money +=money;
     }
 
@@ -39,7 +39,7 @@ public class Account implements IAccount{
     public void doTransactionAcc(double money, Account acc) {
         if(money < this.money) {
             System.out.println("Перевод на счет #" + acc.getAcc() + " " + money + " рублей");
-            acc.setDeposite(money);
+            acc.setDeposit(money);
             this.money -= money;
         } else {
             System.out.println("Недостаточно средств");
